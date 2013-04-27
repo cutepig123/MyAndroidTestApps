@@ -1,0 +1,7 @@
+package com.example.test6_gameframework;
+
+public interface Music {
+	public boolean isLooping() ;
+	public boolean isPlaying() ;
+	public boolean isStopped();
+}

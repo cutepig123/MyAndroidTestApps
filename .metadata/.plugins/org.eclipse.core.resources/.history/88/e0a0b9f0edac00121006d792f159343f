@@ -1,0 +1,38 @@
+package com.example.test6_gameframework;
+import android.content.res.AssetFileDescriptor;
+import android.media.MediaPlayer;
+import android.media.MediaPlayer.OnCompletionListener;
+
+public class AndroidMusic implements Music, OnCompletionListener {
+	   MediaPlayer mediaPlayer; 
+	    boolean isPrepared = false; 
+	    
+	public AndroidMusic(AssetFileDescriptor assetDescriptor)
+	{
+        mediaPlayer = new MediaPlayer(); 
+        try { 
+            mediaPlayer.setDataSource(assetDescriptor.getFileDescriptor(), 
+                    assetDescriptor.getStartOffset(), 
+                    assetDescriptor.getLength()); 
+            mediaPlayer.prepare(); 
+            isPrepared = true; 
+            mediaPlayer.setOnCompletionListener(this); 
+        } catch (Exception e) { 
+            throw new RuntimeException("Couldn't load music"); 
+        } 
+	}
+	
+    @Override 
+    public void dispose() { 
+        if (mediaPlayer.isPlaying()) 
+            mediaPlayer.stop(); 
+        mediaPlayer.release(); 
+    } 
+    
+
+	@Override
+	public void onCompletion(MediaPlayer mp) {
+		// TODO Auto-generated method stub
+		
+	}
+}

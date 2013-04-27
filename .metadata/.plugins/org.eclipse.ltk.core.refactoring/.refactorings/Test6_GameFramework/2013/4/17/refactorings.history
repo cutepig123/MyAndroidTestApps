@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;AndroidFileIO.java&apos; to &apos;Test6_GameFramework/src/com.example.test6_gameframework&apos;&#x0D;&#x0A;- Original project: &apos;Test6_GameFramework&apos;&#x0D;&#x0A;- Destination element: &apos;Test6_GameFramework/src/com.example.test6_gameframework&apos;&#x0D;&#x0A;- Original element: &apos;AndroidFileIO.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src&lt;com.example.test6_gameframework" element1="/src&lt;{AndroidFileIO.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1366813480500" units="1" version="1.0"/>
+</session>

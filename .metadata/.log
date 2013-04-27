@@ -1,0 +1,748 @@
+!SESSION 2013-04-21 00:29:02.281 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.7.0_07
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.ecf.provider.filetransfer 4 0 2013-04-21 00:39:54.453
+!MESSAGE org.eclipse.core.runtime.Status[plugin=org.eclipse.ecf.provider.filetransfer;code=4;message=hardClose;severity4;exception=java.io.IOException: Stream closed;children=[]]
+!STACK 0
+java.io.IOException: Stream closed
+	at java.io.BufferedInputStream.getBufIfOpen(Unknown Source)
+	at java.io.BufferedInputStream.read(Unknown Source)
+	at org.apache.commons.httpclient.ContentLengthInputStream.read(ContentLengthInputStream.java:170)
+	at org.apache.commons.httpclient.ContentLengthInputStream.read(ContentLengthInputStream.java:184)
+	at org.apache.commons.httpclient.ChunkedInputStream.exhaustInputStream(ChunkedInputStream.java:369)
+	at org.apache.commons.httpclient.ContentLengthInputStream.close(ContentLengthInputStream.java:118)
+	at java.io.FilterInputStream.close(Unknown Source)
+	at org.apache.commons.httpclient.AutoCloseInputStream.notifyWatcher(AutoCloseInputStream.java:194)
+	at org.apache.commons.httpclient.AutoCloseInputStream.close(AutoCloseInputStream.java:158)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.hardClose(AbstractRetrieveFileTransfer.java:331)
+	at org.eclipse.ecf.provider.filetransfer.httpclient.HttpClientRetrieveFileTransfer.hardClose(HttpClientRetrieveFileTransfer.java:396)
+	at org.eclipse.ecf.provider.filetransfer.httpclient.HttpClientRetrieveFileTransfer.cancel(HttpClientRetrieveFileTransfer.java:382)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.handleTransferEvent(FileReader.java:173)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.fireTransferReceiveDataEvent(AbstractRetrieveFileTransfer.java:388)
+	at org.eclipse.ecf.provider.filetransfer.httpclient.HttpClientRetrieveFileTransfer.fireTransferReceiveDataEvent(HttpClientRetrieveFileTransfer.java:1163)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.handleReceivedData(AbstractRetrieveFileTransfer.java:288)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer$1.performFileTransfer(AbstractRetrieveFileTransfer.java:173)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:73)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.core.jobs 4 2 2013-04-21 00:41:18.453
+!MESSAGE An internal error occurred during: "Install download3".
+!STACK 0
+java.lang.IllegalArgumentException: Comparison method violates its general contract!
+	at java.util.ComparableTimSort.mergeHi(Unknown Source)
+	at java.util.ComparableTimSort.mergeAt(Unknown Source)
+	at java.util.ComparableTimSort.mergeForceCollapse(Unknown Source)
+	at java.util.ComparableTimSort.sort(Unknown Source)
+	at java.util.ComparableTimSort.sort(Unknown Source)
+	at java.util.Arrays.sort(Unknown Source)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorSelector.hasValidMirror(MirrorSelector.java:319)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:577)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:680)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.getArtifact(MirrorRequest.java:260)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:235)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:191)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:122)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:664)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:63)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.core.jobs 4 2 2013-04-21 00:41:25.890
+!MESSAGE An internal error occurred during: "Install download2".
+!STACK 0
+java.lang.IllegalArgumentException: Comparison method violates its general contract!
+	at java.util.ComparableTimSort.mergeLo(Unknown Source)
+	at java.util.ComparableTimSort.mergeAt(Unknown Source)
+	at java.util.ComparableTimSort.mergeCollapse(Unknown Source)
+	at java.util.ComparableTimSort.sort(Unknown Source)
+	at java.util.ComparableTimSort.sort(Unknown Source)
+	at java.util.Arrays.sort(Unknown Source)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorSelector.hasValidMirror(MirrorSelector.java:319)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:577)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:680)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.getArtifact(MirrorRequest.java:260)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:235)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:191)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:122)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:664)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:63)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.core.jobs 4 2 2013-04-21 00:42:01.703
+!MESSAGE An internal error occurred during: "Install download1".
+!STACK 0
+java.lang.IllegalArgumentException: Comparison method violates its general contract!
+	at java.util.ComparableTimSort.mergeLo(Unknown Source)
+	at java.util.ComparableTimSort.mergeAt(Unknown Source)
+	at java.util.ComparableTimSort.mergeCollapse(Unknown Source)
+	at java.util.ComparableTimSort.sort(Unknown Source)
+	at java.util.ComparableTimSort.sort(Unknown Source)
+	at java.util.Arrays.sort(Unknown Source)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorSelector.hasValidMirror(MirrorSelector.java:319)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:577)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:680)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.getArtifact(MirrorRequest.java:260)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:235)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:191)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:122)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:664)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:63)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10052 2013-04-21 00:46:31.500
+!MESSAGE Cannot continue the operation.  There is another install operation in progress.
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10052 2013-04-21 00:46:31.515
+!MESSAGE Cannot continue the operation.  There is another install operation in progress.
+
+!ENTRY org.eclipse.core.jobs 4 2 2013-04-21 01:16:04.359
+!MESSAGE An internal error occurred during: "Install download2".
+!STACK 0
+java.lang.IllegalArgumentException: Comparison method violates its general contract!
+	at java.util.ComparableTimSort.mergeHi(Unknown Source)
+	at java.util.ComparableTimSort.mergeAt(Unknown Source)
+	at java.util.ComparableTimSort.mergeForceCollapse(Unknown Source)
+	at java.util.ComparableTimSort.sort(Unknown Source)
+	at java.util.ComparableTimSort.sort(Unknown Source)
+	at java.util.Arrays.sort(Unknown Source)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorSelector.hasValidMirror(MirrorSelector.java:319)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:577)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:680)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.getArtifact(MirrorRequest.java:260)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:235)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:191)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:122)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:664)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:63)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.core.jobs 4 2 2013-04-21 01:18:51.140
+!MESSAGE An internal error occurred during: "Install download0".
+!STACK 0
+java.lang.IllegalArgumentException: Comparison method violates its general contract!
+	at java.util.ComparableTimSort.mergeHi(Unknown Source)
+	at java.util.ComparableTimSort.mergeAt(Unknown Source)
+	at java.util.ComparableTimSort.mergeForceCollapse(Unknown Source)
+	at java.util.ComparableTimSort.sort(Unknown Source)
+	at java.util.ComparableTimSort.sort(Unknown Source)
+	at java.util.Arrays.sort(Unknown Source)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorSelector.hasValidMirror(MirrorSelector.java:319)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:577)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:680)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.getArtifact(MirrorRequest.java:260)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:235)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:191)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:122)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:664)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:63)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.core.jobs 4 2 2013-04-21 01:20:34.750
+!MESSAGE An internal error occurred during: "Install download1".
+!STACK 0
+java.lang.IllegalArgumentException: Comparison method violates its general contract!
+	at java.util.ComparableTimSort.mergeHi(Unknown Source)
+	at java.util.ComparableTimSort.mergeAt(Unknown Source)
+	at java.util.ComparableTimSort.mergeCollapse(Unknown Source)
+	at java.util.ComparableTimSort.sort(Unknown Source)
+	at java.util.ComparableTimSort.sort(Unknown Source)
+	at java.util.Arrays.sort(Unknown Source)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorSelector.hasValidMirror(MirrorSelector.java:319)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:577)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:680)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.getArtifact(MirrorRequest.java:260)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:235)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:191)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:122)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:664)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:63)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.core.jobs 4 2 2013-04-21 01:20:39.359
+!MESSAGE An internal error occurred during: "Install download3".
+!STACK 0
+java.lang.IllegalArgumentException: Comparison method violates its general contract!
+	at java.util.ComparableTimSort.mergeLo(Unknown Source)
+	at java.util.ComparableTimSort.mergeAt(Unknown Source)
+	at java.util.ComparableTimSort.mergeCollapse(Unknown Source)
+	at java.util.ComparableTimSort.sort(Unknown Source)
+	at java.util.ComparableTimSort.sort(Unknown Source)
+	at java.util.Arrays.sort(Unknown Source)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorSelector.hasValidMirror(MirrorSelector.java:319)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:577)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:680)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.getArtifact(MirrorRequest.java:260)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:235)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:191)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:122)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:664)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:63)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.p2.engine 4 4 2013-04-21 01:21:12.203
+!MESSAGE An error occurred while collecting items to be installed
+!SUBENTRY 1 org.eclipse.equinox.p2.engine 4 0 2013-04-21 01:21:12.203
+!MESSAGE session context was:(profile=epp.package.java, phase=org.eclipse.equinox.internal.p2.engine.phases.Collect, operand=, action=).
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.203
+!MESSAGE No repository found containing: osgi.bundle,com.ning.async-http-client,1.6.3.201112281337
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.203
+!MESSAGE Problems downloading artifact: osgi.bundle,org.eclipse.ant.core,3.2.302.v20120110-1739.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 4 2013-04-21 01:21:12.203
+!MESSAGE File has invalid content:C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\signatureFile2668480126626158987.jar
+!SUBENTRY 3 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.203
+!MESSAGE Invalid content:lib/antsupportlib.jar
+!STACK 0
+org.eclipse.osgi.signedcontent.InvalidContentException: The file "lib/antsupportlib.jar" in the jar "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\signatureFile2668480126626158987.jar" has been tampered!
+	at org.eclipse.osgi.internal.signedcontent.DigestedInputStream.verifyDigests(DigestedInputStream.java:102)
+	at org.eclipse.osgi.internal.signedcontent.DigestedInputStream.read(DigestedInputStream.java:129)
+	at org.eclipse.osgi.baseadaptor.bundlefile.BundleEntry.getBytes(BundleEntry.java:102)
+	at org.eclipse.osgi.internal.signedcontent.SignedContentImpl$SignedContentEntryImpl.verify(SignedContentImpl.java:165)
+	at org.eclipse.osgi.internal.signedcontent.SignedContentFile.getSignedEntries(SignedContentFile.java:51)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verifyContent(SignatureVerifier.java:82)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verify(SignatureVerifier.java:59)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.close(SignatureVerifier.java:100)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:85)
+	at org.eclipse.equinox.internal.p2.artifact.processing.AbstractBufferingStep.close(AbstractBufferingStep.java:73)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.reportStatus(SimpleArtifactRepository.java:1132)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:570)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:680)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.getArtifact(MirrorRequest.java:260)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:235)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:191)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:122)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:664)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:63)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.203
+!MESSAGE Problems downloading artifact: osgi.bundle,org.eclipse.ant.launching,1.0.101.v20120110-1739.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 4 2013-04-21 01:21:12.203
+!MESSAGE File has invalid content:C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\signatureFile27613682445763297.jar
+!SUBENTRY 3 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.203
+!MESSAGE Invalid content:lib/loggers.jar
+!STACK 0
+org.eclipse.osgi.signedcontent.InvalidContentException: The file "lib/loggers.jar" in the jar "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\signatureFile27613682445763297.jar" has been tampered!
+	at org.eclipse.osgi.internal.signedcontent.DigestedInputStream.verifyDigests(DigestedInputStream.java:102)
+	at org.eclipse.osgi.internal.signedcontent.DigestedInputStream.read(DigestedInputStream.java:129)
+	at org.eclipse.osgi.baseadaptor.bundlefile.BundleEntry.getBytes(BundleEntry.java:102)
+	at org.eclipse.osgi.internal.signedcontent.SignedContentImpl$SignedContentEntryImpl.verify(SignedContentImpl.java:165)
+	at org.eclipse.osgi.internal.signedcontent.SignedContentFile.getSignedEntries(SignedContentFile.java:51)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verifyContent(SignatureVerifier.java:82)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verify(SignatureVerifier.java:59)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.close(SignatureVerifier.java:100)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:85)
+	at org.eclipse.equinox.internal.p2.artifact.processing.AbstractBufferingStep.close(AbstractBufferingStep.java:73)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.reportStatus(SimpleArtifactRepository.java:1132)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:570)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:680)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.getArtifact(MirrorRequest.java:260)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:235)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:191)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:122)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:664)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:63)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 3 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.203
+!MESSAGE Invalid content:lib/antdebug.jar
+!STACK 0
+org.eclipse.osgi.signedcontent.InvalidContentException: The file "lib/antdebug.jar" in the jar "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\signatureFile27613682445763297.jar" has been tampered!
+	at org.eclipse.osgi.internal.signedcontent.DigestedInputStream.verifyDigests(DigestedInputStream.java:102)
+	at org.eclipse.osgi.internal.signedcontent.DigestedInputStream.read(DigestedInputStream.java:129)
+	at org.eclipse.osgi.baseadaptor.bundlefile.BundleEntry.getBytes(BundleEntry.java:102)
+	at org.eclipse.osgi.internal.signedcontent.SignedContentImpl$SignedContentEntryImpl.verify(SignedContentImpl.java:165)
+	at org.eclipse.osgi.internal.signedcontent.SignedContentFile.getSignedEntries(SignedContentFile.java:51)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verifyContent(SignatureVerifier.java:82)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verify(SignatureVerifier.java:59)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.close(SignatureVerifier.java:100)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:85)
+	at org.eclipse.equinox.internal.p2.artifact.processing.AbstractBufferingStep.close(AbstractBufferingStep.java:73)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.reportStatus(SimpleArtifactRepository.java:1132)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:570)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:680)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.getArtifact(MirrorRequest.java:260)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:235)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:191)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:122)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:664)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:63)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 3 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE Invalid content:lib/remote.jar
+!STACK 0
+org.eclipse.osgi.signedcontent.InvalidContentException: The file "lib/remote.jar" in the jar "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\signatureFile27613682445763297.jar" has been tampered!
+	at org.eclipse.osgi.internal.signedcontent.DigestedInputStream.verifyDigests(DigestedInputStream.java:102)
+	at org.eclipse.osgi.internal.signedcontent.DigestedInputStream.read(DigestedInputStream.java:129)
+	at org.eclipse.osgi.baseadaptor.bundlefile.BundleEntry.getBytes(BundleEntry.java:102)
+	at org.eclipse.osgi.internal.signedcontent.SignedContentImpl$SignedContentEntryImpl.verify(SignedContentImpl.java:165)
+	at org.eclipse.osgi.internal.signedcontent.SignedContentFile.getSignedEntries(SignedContentFile.java:51)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verifyContent(SignatureVerifier.java:82)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verify(SignatureVerifier.java:59)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.close(SignatureVerifier.java:100)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:85)
+	at org.eclipse.equinox.internal.p2.artifact.processing.AbstractBufferingStep.close(AbstractBufferingStep.java:73)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.reportStatus(SimpleArtifactRepository.java:1132)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:570)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:680)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.getArtifact(MirrorRequest.java:260)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:235)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:191)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:122)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:664)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:63)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE Problems downloading artifact: osgi.bundle,org.eclipse.core.resources,3.7.101.v20120125-1505.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 4 2013-04-21 01:21:12.218
+!MESSAGE File has invalid content:C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\signatureFile6396930346585472568.jar
+!SUBENTRY 3 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE Invalid content:ant_tasks/resources-ant.jar
+!STACK 0
+org.eclipse.osgi.signedcontent.InvalidContentException: The file "ant_tasks/resources-ant.jar" in the jar "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\signatureFile6396930346585472568.jar" has been tampered!
+	at org.eclipse.osgi.internal.signedcontent.DigestedInputStream.verifyDigests(DigestedInputStream.java:102)
+	at org.eclipse.osgi.internal.signedcontent.DigestedInputStream.read(DigestedInputStream.java:129)
+	at org.eclipse.osgi.baseadaptor.bundlefile.BundleEntry.getBytes(BundleEntry.java:102)
+	at org.eclipse.osgi.internal.signedcontent.SignedContentImpl$SignedContentEntryImpl.verify(SignedContentImpl.java:165)
+	at org.eclipse.osgi.internal.signedcontent.SignedContentFile.getSignedEntries(SignedContentFile.java:51)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verifyContent(SignatureVerifier.java:82)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.verify(SignatureVerifier.java:59)
+	at org.eclipse.equinox.internal.p2.artifact.repository.SignatureVerifier.close(SignatureVerifier.java:100)
+	at org.eclipse.equinox.internal.provisional.p2.artifact.repository.processing.ProcessingStep.close(ProcessingStep.java:85)
+	at org.eclipse.equinox.internal.p2.artifact.processing.AbstractBufferingStep.close(AbstractBufferingStep.java:73)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.reportStatus(SimpleArtifactRepository.java:1132)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:570)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:680)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.getArtifact(MirrorRequest.java:260)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:235)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:191)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:122)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:664)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:63)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.archetype.common,1.0.200.20111228-1245
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.launching,1.0.200.20111228-1245
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.maven.indexer,1.0.200.20111228-1245
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.maven.runtime,1.0.200.20111228-1245
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.model.edit,1.0.200.20111228-1245
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.refactoring,1.0.200.20111228-1245
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.scm,1.0.200.20111228-1245
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.usagedata,1.0.200.20111228-1245
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.core,1.3.0.r37x201202052311
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.core.databinding,1.3.0.r37x201202052311
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.core.lib,1.3.0.r37x201202052311
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.core.ui,1.3.0.r37x201202052340
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.discovery.core,1.3.0.r37x201202052340
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.discovery.ui,1.3.0.r37x201202052340
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.layout.group,1.3.0.r37x201202060028
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.os,1.3.0.r37x201202052311
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.os.win32,1.3.0.r37x201202052311
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.runtime,1.3.0.r37x201202052311
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.runtime.lib,1.3.0.r37x201202052311
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.swing,1.3.0.r37x201202021417
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.swing.FormLayout,1.3.0.r37x201202021417
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.swing.FormLayout.lib,1.3.0.r37x201202021417
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.swing.MigLayout,1.3.0.r37x201202021417
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.swing.MigLayout.lib,1.3.0.r37x201202021417
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.swing.databinding,1.3.0.r37x201202021417
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.swing.java6,1.3.0.r37x201202021417
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wb.swing.jsr296,1.3.0.r37x201202021417
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.wst.server.core,1.1.304.v20120208_1420
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.xsd,2.7.1.v20120130-0943
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.xsd.edit,2.6.0.v20120130-0943
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE No repository found containing: osgi.bundle,org.jboss.netty,3.2.4.Final-201112281337
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.egit,1.3.0.201202151440-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.egit.core,1.3.0.201202151440-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.egit.doc,1.3.0.201202151440-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.egit,1.3.0.201202151440-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.egit.mylyn,1.3.0.201202151440-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.egit.mylyn.ui,1.3.0.201202151440-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.egit.psf,1.3.0.201202151440-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.egit.ui,1.3.0.201202151440-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jgit,1.3.0.201202151440-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.jgit,1.3.0.201202151440-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.m2e.feature,1.0.200.20111228-1245
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.m2e.logback.feature,1.0.200.20111228-1245
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.wb.core.feature,1.3.0.r37x201202052311
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.wb.core.ui.feature,1.3.0.r37x201202052340
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.wb.layout.group.feature,1.3.0.r37x201202060028
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2013-04-21 01:21:12.218
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.wb.swing.feature,1.3.0.r37x201202021417
+!SESSION 2013-04-21 01:31:55.078 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.7.0_07
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.java.product
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2013-04-21 01:34:04.781
+!MESSAGE Failed to load properties file for project 'helloworld'
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2013-04-21 01:34:06.593
+!MESSAGE Unable to update index for central|http://repo1.maven.org/maven2
+!SESSION 2013-04-21 02:01:27.843 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.7.0_07
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2013-04-21 02:01:44.234
+!MESSAGE Unable to update index for central|http://repo1.maven.org/maven2
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2013-04-21 02:24:40.781
+!MESSAGE Failed to load properties file for project 'Test2'
+
+!ENTRY org.eclipse.ui 4 4 2013-04-21 02:38:04.765
+!MESSAGE Referenced part does not exist yet: org.eclipse.ui.views.ProblemView.
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2013-04-21 12:20:12.296
+!MESSAGE Failed to load properties file for project 'Test3_TodoList'
+
+!ENTRY org.eclipse.search 4 0 2013-04-21 12:21:54.734
+!MESSAGE Problems encountered during text search.
+!SUBENTRY 1 org.eclipse.search 4 4 2013-04-21 12:21:54.734
+!MESSAGE File 'helloworld_1/bin/jarlist.cache' has been skipped, problem while reading: ('Resource is out of sync with the file system: '/helloworld_1/bin/jarlist.cache'.').
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/helloworld_1/bin/jarlist.cache'.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:793)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:278)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.getInputStream(FileCharSequenceProvider.java:283)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.initializeReader(FileCharSequenceProvider.java:277)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider$FileCharSequence.reset(FileCharSequenceProvider.java:269)
+	at org.eclipse.search.internal.core.text.FileCharSequenceProvider.newCharSequence(FileCharSequenceProvider.java:40)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.processFile(TextSearchVisitor.java:260)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.processFiles(TextSearchVisitor.java:196)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.search(TextSearchVisitor.java:172)
+	at org.eclipse.search.internal.core.text.TextSearchVisitor.search(TextSearchVisitor.java:184)
+	at org.eclipse.search.core.text.TextSearchEngine$1.search(TextSearchEngine.java:54)
+	at org.eclipse.search.internal.ui.text.FileSearchQuery.run(FileSearchQuery.java:182)
+	at org.eclipse.search2.internal.ui.InternalSearchUI$InternalSearchJob.run(InternalSearchUI.java:91)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 2 org.eclipse.core.resources 4 274 2013-04-21 12:21:54.734
+!MESSAGE Resource is out of sync with the file system: '/helloworld_1/bin/jarlist.cache'.
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2013-04-21 13:47:32.937
+!MESSAGE Error generating final archive: java.io.FileNotFoundException: F:\android\Test3_TodoList\bin\resources.ap_ does not exist
+!STACK 0
+com.android.sdklib.build.ApkCreationException: java.io.FileNotFoundException: F:\android\Test3_TodoList\bin\resources.ap_ does not exist
+	at com.android.sdklib.build.ApkBuilder.init(ApkBuilder.java:469)
+	at com.android.sdklib.build.ApkBuilder.<init>(ApkBuilder.java:422)
+	at com.android.sdklib.build.ApkBuilder.<init>(ApkBuilder.java:362)
+	at com.android.ide.eclipse.adt.internal.build.BuildHelper.finalPackage(BuildHelper.java:367)
+	at com.android.ide.eclipse.adt.internal.build.BuildHelper.finalDebugPackage(BuildHelper.java:335)
+	at com.android.ide.eclipse.adt.internal.build.builders.PostCompilerBuilder.build(PostCompilerBuilder.java:626)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:321)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:396)
+	at org.eclipse.core.internal.resources.Project$1.run(Project.java:618)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:597)
+	at org.eclipse.core.internal.resources.Project.build(Project.java:124)
+	at com.android.ide.eclipse.adt.internal.project.ProjectHelper.doFullIncrementalDebugBuild(ProjectHelper.java:1046)
+	at com.android.ide.eclipse.adt.internal.launch.LaunchConfigDelegate.launch(LaunchConfigDelegate.java:147)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:854)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:703)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:928)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1132)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.FileNotFoundException: F:\android\Test3_TodoList\bin\resources.ap_ does not exist
+	at com.android.sdklib.build.ApkBuilder.checkInputFile(ApkBuilder.java:934)
+	at com.android.sdklib.build.ApkBuilder.init(ApkBuilder.java:438)
+	... 21 more
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2013-04-21 13:49:16.468
+!MESSAGE Error generating final archive: java.io.FileNotFoundException: F:\android\Test3_TodoList\bin\classes.dex does not exist
+!STACK 0
+com.android.sdklib.build.ApkCreationException: java.io.FileNotFoundException: F:\android\Test3_TodoList\bin\classes.dex does not exist
+	at com.android.sdklib.build.ApkBuilder.init(ApkBuilder.java:469)
+	at com.android.sdklib.build.ApkBuilder.<init>(ApkBuilder.java:422)
+	at com.android.sdklib.build.ApkBuilder.<init>(ApkBuilder.java:362)
+	at com.android.ide.eclipse.adt.internal.build.BuildHelper.finalPackage(BuildHelper.java:367)
+	at com.android.ide.eclipse.adt.internal.build.BuildHelper.finalDebugPackage(BuildHelper.java:335)
+	at com.android.ide.eclipse.adt.internal.build.builders.PostCompilerBuilder.build(PostCompilerBuilder.java:626)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:321)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:396)
+	at org.eclipse.core.internal.resources.Project$1.run(Project.java:618)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:597)
+	at org.eclipse.core.internal.resources.Project.build(Project.java:124)
+	at com.android.ide.eclipse.adt.internal.project.ProjectHelper.doFullIncrementalDebugBuild(ProjectHelper.java:1046)
+	at com.android.ide.eclipse.adt.internal.launch.LaunchConfigDelegate.launch(LaunchConfigDelegate.java:147)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:854)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:703)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:928)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1132)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.FileNotFoundException: F:\android\Test3_TodoList\bin\classes.dex does not exist
+	at com.android.sdklib.build.ApkBuilder.checkInputFile(ApkBuilder.java:934)
+	at com.android.sdklib.build.ApkBuilder.init(ApkBuilder.java:440)
+	... 21 more
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2013-04-21 14:17:31.218
+!MESSAGE Failed to load properties file for project 'Test4_ADs'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2013-04-23 21:20:47.562
+!MESSAGE Failed to load properties file for project 'Test5'
+!SESSION 2013-04-23 22:25:36.531 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.7.0_07
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2013-04-23 22:25:42.390
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.android.ide.eclipse.adt 4 4 2013-04-23 22:26:22.390
+!MESSAGE Failed
+!STACK 0
+java.util.EmptyStackException
+	at java.util.Stack.peek(Unknown Source)
+	at java.util.Stack.pop(Unknown Source)
+	at org.eclipse.wst.xml.core.internal.document.ElementImpl.getDefaultValue(ElementImpl.java:395)
+	at org.eclipse.wst.xml.core.internal.document.ElementImpl.getAttributeNode(ElementImpl.java:271)
+	at org.eclipse.wst.xml.core.internal.document.AttrImpl.getNamespaceURI(AttrImpl.java:243)
+	at org.eclipse.wst.xml.core.internal.document.ElementImpl.getAttributeNodeNS(ElementImpl.java:321)
+	at org.eclipse.wst.xml.core.internal.document.ElementImpl.getAttributeNS(ElementImpl.java:342)
+	at com.android.tools.lint.detector.api.Project.readManifest(Project.java:523)
+	at com.android.tools.lint.client.api.LintDriver.runFileDetectors(LintDriver.java:852)
+	at com.android.tools.lint.client.api.LintDriver.checkProject(LintDriver.java:785)
+	at com.android.tools.lint.client.api.LintDriver.analyze(LintDriver.java:386)
+	at com.android.ide.eclipse.adt.internal.lint.LintJob.run(LintJob.java:153)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2013-04-23 22:26:29.312
+!MESSAGE Unable to update index for central|http://repo1.maven.org/maven2
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2013-04-24 22:22:09.000
+!MESSAGE Failed to load properties file for project 'Test6_GameFramework'
+!SESSION 2013-04-26 23:30:48.937 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.7.0_07
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2013-04-26 23:31:35.750
+!MESSAGE Unable to update index for central|http://repo1.maven.org/maven2
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2013-04-26 23:33:37.421
+!MESSAGE Failed to load properties file for project 'Test7_SMS'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2013-04-26 23:54:51.625
+!MESSAGE LinearLayoutRule.onDropped() failed: org.w3c.dom.DOMException: Not Found
+!STACK 0
+org.w3c.dom.DOMException: Not Found
+	at org.eclipse.wst.xml.core.internal.document.NodeContainer.insertBefore(NodeContainer.java:248)
+	at org.eclipse.wst.xml.core.internal.document.ElementImpl.insertBefore(ElementImpl.java:762)
+	at com.android.ide.eclipse.adt.internal.editors.uimodel.UiElementNode.createXmlNode(UiElementNode.java:1041)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gre.NodeProxy.insertOrAppend(NodeProxy.java:309)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gre.NodeProxy.insertChildAt(NodeProxy.java:254)
+	at com.android.ide.common.layout.BaseLayoutRule$5.handle(BaseLayoutRule.java:595)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gre.NodeProxy$1.run(NodeProxy.java:233)
+	at com.android.ide.eclipse.adt.internal.editors.AndroidXmlEditor.wrapEditXmlModel(AndroidXmlEditor.java:1049)
+	at com.android.ide.eclipse.adt.internal.editors.AndroidXmlEditor.wrapUndoEditXmlModel(AndroidXmlEditor.java:1190)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gre.NodeProxy.editXml(NodeProxy.java:224)
+	at com.android.ide.common.layout.BaseLayoutRule.insertAt(BaseLayoutRule.java:586)
+	at com.android.ide.common.layout.LinearLayoutRule.onDropped(LinearLayoutRule.java:557)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gre.RulesEngine.callOnDropped(RulesEngine.java:367)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.MoveGesture$2.run(MoveGesture.java:400)
+	at com.android.ide.eclipse.adt.internal.editors.AndroidXmlEditor.wrapEditXmlModel(AndroidXmlEditor.java:1049)
+	at com.android.ide.eclipse.adt.internal.editors.AndroidXmlEditor.wrapUndoEditXmlModel(AndroidXmlEditor.java:1190)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.MoveGesture.drop(MoveGesture.java:396)
+	at com.android.ide.eclipse.adt.internal.editors.layout.gle2.GestureManager$CanvasDropListener.drop(GestureManager.java:679)
+	at org.eclipse.swt.dnd.DNDListener.handleEvent(DNDListener.java:90)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1077)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1062)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:774)
+	at org.eclipse.swt.dnd.DropTarget.Drop(DropTarget.java:456)
+	at org.eclipse.swt.dnd.DropTarget$3.method6(DropTarget.java:258)
+	at org.eclipse.swt.internal.ole.win32.COMObject.callback6(COMObject.java:119)
+	at org.eclipse.swt.internal.ole.win32.COM.DoDragDrop(Native Method)
+	at org.eclipse.swt.dnd.DragSource.drag(DragSource.java:363)
+	at org.eclipse.swt.dnd.DragSource.access$0(DragSource.java:289)
+	at org.eclipse.swt.dnd.DragSource$1.handleEvent(DragSource.java:172)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4165)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3754)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2696)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2660)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2494)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:674)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:667)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+!SESSION 2013-04-27 12:22:02.750 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.7.0_07
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.java.product -data G:\Backup\我的文档\GitHub\MyAndroidTestApps -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2013-04-27 12:22:04.156
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.osgi 2 0 2013-04-27 12:22:32.015
+!MESSAGE While loading class "org.eclipse.m2e.core.internal.content.PomFileContentDescriber", thread "Thread[Worker-18,5,main]" timed out waiting (5000ms) for thread "Thread[Worker-17,5,main]" to finish starting bundle "org.eclipse.m2e.core_1.0.0.20110607-2117 [170]". To avoid deadlock, thread "Thread[Worker-18,5,main]" is proceeding but "org.eclipse.m2e.core.internal.content.PomFileContentDescriber" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: State change in progress for bundle "reference:file:plugins/org.eclipse.m2e.core_1.0.0.20110607-2117.jar" by thread "Worker-17".
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1087)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:297)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:268)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:462)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:400)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:476)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:429)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:417)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.osgi.internal.loader.BundleLoader.loadClass(BundleLoader.java:345)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.loadClass(BundleHost.java:229)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.loadClass(AbstractBundle.java:1207)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.core.internal.content.ContentType.getDescriber(ContentType.java:271)
+	at org.eclipse.core.internal.content.ContentTypeCatalog.collectMatchingByContents(ContentTypeCatalog.java:184)
+	at org.eclipse.core.internal.content.ContentTypeCatalog.internalFindContentTypesFor(ContentTypeCatalog.java:403)
+	at org.eclipse.core.internal.content.ContentTypeCatalog.internalFindContentTypesFor(ContentTypeCatalog.java:450)
+	at org.eclipse.core.internal.content.ContentTypeCatalog.getDescriptionFor(ContentTypeCatalog.java:346)
+	at org.eclipse.core.internal.content.ContentTypeCatalog.getDescriptionFor(ContentTypeCatalog.java:360)
+	at org.eclipse.core.internal.content.ContentTypeMatcher.getDescriptionFor(ContentTypeMatcher.java:86)
+	at org.eclipse.core.internal.resources.ContentDescriptionManager.readDescription(ContentDescriptionManager.java:445)
+	at org.eclipse.core.internal.resources.ContentDescriptionManager.getDescriptionFor(ContentDescriptionManager.java:355)
+	at org.eclipse.core.internal.resources.File.getContentDescription(File.java:271)
+	at org.eclipse.ui.internal.ide.ContentTypeDecorator.decorate(ContentTypeDecorator.java:47)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:269)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:81)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:365)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:347)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:370)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:330)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	... 39 more
+Root exception:
+org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1087)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:297)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:268)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:462)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:400)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:476)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:429)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:417)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.osgi.internal.loader.BundleLoader.loadClass(BundleLoader.java:345)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.loadClass(BundleHost.java:229)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.loadClass(AbstractBundle.java:1207)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.core.internal.content.ContentType.getDescriber(ContentType.java:271)
+	at org.eclipse.core.internal.content.ContentTypeCatalog.collectMatchingByContents(ContentTypeCatalog.java:184)
+	at org.eclipse.core.internal.content.ContentTypeCatalog.internalFindContentTypesFor(ContentTypeCatalog.java:403)
+	at org.eclipse.core.internal.content.ContentTypeCatalog.internalFindContentTypesFor(ContentTypeCatalog.java:450)
+	at org.eclipse.core.internal.content.ContentTypeCatalog.getDescriptionFor(ContentTypeCatalog.java:346)
+	at org.eclipse.core.internal.content.ContentTypeCatalog.getDescriptionFor(ContentTypeCatalog.java:360)
+	at org.eclipse.core.internal.content.ContentTypeMatcher.getDescriptionFor(ContentTypeMatcher.java:86)
+	at org.eclipse.core.internal.resources.ContentDescriptionManager.readDescription(ContentDescriptionManager.java:445)
+	at org.eclipse.core.internal.resources.ContentDescriptionManager.getDescriptionFor(ContentDescriptionManager.java:355)
+	at org.eclipse.core.internal.resources.File.getContentDescription(File.java:271)
+	at org.eclipse.ui.internal.ide.ContentTypeDecorator.decorate(ContentTypeDecorator.java:47)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:269)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:81)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:365)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:347)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:370)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:330)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2013-04-27 12:22:44.171
+!MESSAGE Unable to update index for central|http://repo1.maven.org/maven2

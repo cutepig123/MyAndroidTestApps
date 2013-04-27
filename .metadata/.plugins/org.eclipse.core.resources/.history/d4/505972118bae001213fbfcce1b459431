@@ -1,0 +1,64 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter the phone number of recipient" />
+
+    <EditText
+        android:id="@+id/txtPhoneNo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Message" />
+
+    <EditText
+        android:id="@+id/txtMessage"
+        android:layout_width="fill_parent"
+        android:layout_height="150px"
+        android:gravity="top" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <RadioButton
+            android:id="@+id/radio_sendDirectly"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Send directly" />
+
+        <RadioButton
+            android:id="@+id/radio_sendWithChk"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Send with checking" />
+
+        <RadioButton
+            android:id="@+id/radio_sendViaSystem" 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Send via system" />
+        
+        <RadioButton
+            android:id="@+id/radio_sendViaSystem" 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Send via system 2" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnSendSMS"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Send SMS" />
+
+</LinearLayout>

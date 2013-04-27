@@ -1,0 +1,14 @@
+package com.example.test6_gameframework;
+import android.content.res.AssetFileDescriptor;
+import android.media.MediaPlayer.OnCompletionListener; 
+
+import java.io.IOException; 
+
+import android.content.res.AssetFileDescriptor; 
+import android.media.MediaPlayer; 
+
+public class AndroidMusic implements Music, OnCompletionListener {
+	public AndroidMusic(AssetFileDescriptor as)
+	{
+	}
+}

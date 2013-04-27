@@ -40,5 +40,13 @@ MediaPlayer
 WakeLock，全屏，View,画线，园，Canvas, Paint
 BitmapFactory, Bitmap, Canvas.DrawBitmap
 Font
+SurfaceHolder -> Canvas
+Thread, Runable
 
 
+- Test6_SMS
+测试接收，发送SMS
+在receive里面分析传入的数据，执行SendSMS,Toast预定义动作
+参考 http://mobiforge.com/developing/story/sms-messaging-android 
+
+可以开两个模拟器做短信收发测试

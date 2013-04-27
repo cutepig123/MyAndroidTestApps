@@ -50,3 +50,38 @@ Thread, Runable
 参考 http://mobiforge.com/developing/story/sms-messaging-android 
 
 可以开两个模拟器做短信收发测试
+
+- SMSControl
+Requirements
+	利用SMS控制手机
+	支持命令： Toast, Enable/Disa/GetGPS, Enable/DisaInternet, GetIP, GetLocation, SendSMS, 拍照， screenShot, LockScreen, Send通信簿，SendAllSMSData, 设置/关闭闹铃
+Proposal:
+	程序后台运行
+	设置界面，
+		可以让用户选择支持的SMS命令，
+		密码设置，
+		选择是否向发命令方Send Reply
+		Log all control message with the time
+	收到SMS命令后，start another activity and prompt user in 30s. user can select YES or NO. 
+
+- test8_intentservice
+学习创建，使用service
+学习intent：
+	setData --> getData
+	putExtra --> getStringExtra, getExtras().get
+学习Messager, Message
+	new Messenger(handler)
+	send
+
+	Message.obtain()
+		arg1
+		obj
+学习用文件读写api下载文件
+
+程序执行流程
+
+lauch MainActivity ->a handler is created --> user  click button --> intent, and message created, and service started --> sercice onHandleIntent is called -->
+
+Q： add an sdcard to the emulator
+During the setup for the virtual device a window with options should come up that asks if you want an sdcard and what size you want it. This is how i did it
+

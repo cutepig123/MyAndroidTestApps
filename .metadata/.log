@@ -746,3 +746,9 @@ org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
 
 !ENTRY org.eclipse.m2e.logback.appender 4 0 2013-04-27 12:22:44.171
 !MESSAGE Unable to update index for central|http://repo1.maven.org/maven2
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2013-04-27 12:40:21.734
+!MESSAGE Failed to load properties file for project 'SMSControl'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2013-04-27 13:28:17.375
+!MESSAGE Failed to load properties file for project 'Test8_IntentService'

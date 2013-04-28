@@ -18,4 +18,5 @@
 <fullyQualifiedTypeName name="com.example.test6_gameframework.FileIO"/>
 <fullyQualifiedTypeName name="android.content.IntentFilter"/>
 <fullyQualifiedTypeName name="android.telephony.SmsManager"/>
+<fullyQualifiedTypeName name="com.example.smscontrol.R.id"/>
 </qualifiedTypeNameHistroy>

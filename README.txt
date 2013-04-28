@@ -65,6 +65,7 @@ Proposal:
 	收到SMS命令后，start another activity and prompt user in 30s. user can select YES or NO. 
 
 - test8_intentservice
+reference： http://www.vogella.com/articles/AndroidServices/article.html#services_declare
 学习创建，使用service
 学习intent：
 	setData --> getData
@@ -84,4 +85,20 @@ lauch MainActivity ->a handler is created --> user  click button --> intent, and
 
 Q： add an sdcard to the emulator
 During the setup for the virtual device a window with options should come up that asks if you want an sdcard and what size you want it. This is how i did it
+
+
+- Test9_LocalService
+reference： http://www.vogella.com/articles/AndroidServices/article.html#services_declare
+need testing。。。
+
+- Test10_compass
+定制一个指南针的视图
+有个问题不知怎样解决： 我想加入一个progress bar来控制方向，但发现progress bar显示不出来
+
+- Test11_TodoList
+定制了View的TodoList
+
+- Test12_TodoList
+通过MyCustomAdapter实现custom listview
+参考http://blog.joomla.org.tw/android/180-ListView%E4%B9%8B%E4%BA%8C%EF%BC%9A%E6%94%B9%E5%AF%ABArrayAdapter%E7%9A%84getView.html
 

@@ -17,12 +17,18 @@ public class CompassView extends View{
 	Paint markerPaint, textPaint, circlePaint;
 	String northString, eastString, southString, westString;
 	int textHeight;
+	String text;
 	Random rand = new Random(); 
 	
-//	public void setBearing(float bearing)
-//	{
-//		this.bearing =bearing;
-//	}
+	public void setBearing(float bearing)
+	{
+		this.bearing =bearing;
+	}
+	public void setText(String text)
+	{
+		this.text =text;
+	}
+	
 	void initView(){
 		setFocusable(true);
 		
@@ -51,29 +57,25 @@ public class CompassView extends View{
 	
 	public CompassView(Context context) {
 		super(context);
-		// TODO Auto-generated constructor stub
 		initView();
 	}
 	
 	public CompassView(Context context, AttributeSet atrs) {
 		super(context);
-		// TODO Auto-generated constructor stub
 		initView();
 	}
 
 	public CompassView(Context context, AttributeSet atrs, int defaultStyle) {
 		super(context);
-		// TODO Auto-generated constructor stub
+
 		initView();
 	}
 	
 	@Override
 	protected void onDraw(Canvas canvas) {
 		
-		bearing =(float) (rand.nextFloat()*360);
 		Log.d("JSHe", "bearing " + bearing);
 		
-		// TODO Auto-generated method stub
 		int px =getMeasuredWidth()/2;
 		int py =getMeasuredHeight()/2;
 		int radius =Math.min(px, py);
@@ -86,6 +88,9 @@ public class CompassView extends View{
 		int cardinalX =px -textWidth/2;
 		int cardinalY =py -radius +textHeight;
 		
+		if(null!= text)
+			canvas.drawText(text, px, py, textPaint);
+			
 		for(int i=0;i<24;i++){
 			canvas.drawLine(px, py-radius, px, py-radius+10, markerPaint);
 			
@@ -125,13 +130,10 @@ public class CompassView extends View{
 				
 		}
 		canvas.restore();
-		//super.onDraw(canvas);
 	}
 
 	@Override
 	protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-		// TODO Auto-generated method stub
-		//super.onMeasure(widthMeasureSpec, heightMeasureSpec);
 		int w =measure(widthMeasureSpec);
 		int h =measure(heightMeasureSpec);
 		

@@ -19,8 +19,7 @@ public class AccelerometerTest extends Activity implements SensorEventListener {
         textView = new TextView(this); 
         setContentView(textView); 
  
-        SensorManager manager = (SensorManager) 
-getSystemService(Context.SENSOR_SERVICE); 
+        SensorManager manager = (SensorManager) getSystemService(Context.SENSOR_SERVICE); 
         if (manager.getSensorList(Sensor.TYPE_ACCELEROMETER).size() == 0) { 
             textView.setText("No accelerometer installed"); 
         } else { 

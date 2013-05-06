@@ -42,6 +42,10 @@
           <activity android:label="Accelerometer Test"  
           android:name=".AccelerometerTest" 
           android:configChanges="keyboard|keyboardHidden|orientation" /> 
+          
+          <activity android:label="SensorTest2"  
+          android:name=".SensorTest2" 
+          android:configChanges="keyboard|keyboardHidden|orientation" /> 
          
          <activity android:label="Assets Test"  
           android:name=".AssetsTest" 

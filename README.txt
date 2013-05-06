@@ -102,3 +102,19 @@ need testing。。。
 通过MyCustomAdapter实现custom listview
 参考http://blog.joomla.org.tw/android/180-ListView%E4%B9%8B%E4%BA%8C%EF%BC%9A%E6%94%B9%E5%AF%ABArrayAdapter%E7%9A%84getView.html
 
+- Test10_compass_v2
+使用双缓冲加速绘图
+
+- Test13_CustomView
+参考http://developer.android.com/training/custom-views/create-view.html#customattr
+
+- Test13_DoubleBuffer
+使用双缓冲加速绘图
+
+- Test14_SimpleAssessmentTest
+动态创建 LinearLayout
+
+- Test15_AndEngine
+下载并且导入andengine到eclipse: git clone https://github.com/nicolasgramlich/AndEngine.git
+编译（可能要修改build path）
+写一个例子程序 代码来自： https://github.com/nicolasgramlich/AndEngineExamples/blob/GLES2/src/org/andengine/examples/LineExample.java

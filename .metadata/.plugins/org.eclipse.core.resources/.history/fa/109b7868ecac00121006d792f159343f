@@ -1,8 +1,0 @@
-package com.example.test6_gameframework;
-import android.content.res.AssetFileDescriptor;
-
-public class AndroidMusic {
-	public AndroidMusic(AssetFileDescriptor as)
-	{
-	}
-}

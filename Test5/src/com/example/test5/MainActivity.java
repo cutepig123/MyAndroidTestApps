@@ -10,7 +10,7 @@ import android.widget.ListView;
 public class MainActivity extends ListActivity {
 
     String tests[] = { "LifeCycleTest", "SingleTouchTest", "MultiTouchTest", 
-            "KeyTest", "AccelerometerTest", "AssetsTest", 
+            "KeyTest", "AccelerometerTest", "SensorTest2", "AssetsTest", 
             "ExternalStorageTest", "SoundPoolTest", "MediaPlayerTest", 
             "FullScreenTest", "RenderViewTest", "ShapeTest", "BitmapTest", 
             "FontTest", "SurfaceViewTest" }; 

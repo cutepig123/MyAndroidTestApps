@@ -29,12 +29,15 @@ import android.text.style.ImageSpan;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextSwitcher;
 import android.widget.TextView;
@@ -76,15 +79,31 @@ public class Test extends Activity {
 	private TextView status;
 	private TextSwitcher testResult;
 	private ListView tests;
-
+	private EditText etIp; 
+	private Button btnCon;
+	
 	@Override
     public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		uri = URI.create("http://10.0.2.2:8888");
-		client = new XMLRPCClient(uri);
-
 		setContentView(R.layout.main);
+		
+		etIp = (EditText) findViewById(R.id.editText1);
+		etIp.setText("http://192.168.1.100:8888");
+		
+		btnCon = (Button) findViewById(R.id.button_connect);
+		btnCon.setOnClickListener(new OnClickListener(){
+
+			@Override
+			public void onClick(View v) {
+
+				uri = URI.create(etIp.getText().toString());
+				client = new XMLRPCClient(uri);
+			}
+			
+		});
+		
+		
         testResult = (TextSwitcher) findViewById(R.id.text_result);
         
         LayoutInflater inflater = LayoutInflater.from(this);
@@ -97,8 +116,6 @@ public class Test extends Activity {
 
         Animation inAnim = AnimationUtils.loadAnimation(this, R.anim.push_left_in);
         Animation outAnim = AnimationUtils.loadAnimation(this, R.anim.push_left_out);
-//        Animation inAnim = AnimationUtils.loadAnimation(this, android.R.anim.fade_in);
-//        Animation outAnim = AnimationUtils.loadAnimation(this, android.R.anim.fade_out);
         inAnim.setStartOffset(250);
         testResult.setInAnimation(inAnim);
         testResult.setOutAnimation(outAnim);

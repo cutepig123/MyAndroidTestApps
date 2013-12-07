@@ -2,7 +2,7 @@ from SimpleXMLRPCServer import SimpleXMLRPCServer
 import datetime, socket, xmlrpclib, random, array
 
 # Create server
-server = SimpleXMLRPCServer(("localhost", 8888))
+server = SimpleXMLRPCServer(("", 8888))
 
 # Register an instance; all the methods of the instance are 
 # published as XML-RPC methods

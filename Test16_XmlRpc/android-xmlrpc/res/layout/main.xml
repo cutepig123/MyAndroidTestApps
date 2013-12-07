@@ -8,6 +8,19 @@
     android:padding="2dip"
     android:background="@drawable/back"
 >
+
+    <EditText
+            android:id="@+id/editText1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ems="10" />
+    
+     <Button
+            android:id="@+id/button_connect"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Connect" />
+     
 	<TextView
 	    android:layout_width="fill_parent"
 	    android:layout_height="wrap_content"
